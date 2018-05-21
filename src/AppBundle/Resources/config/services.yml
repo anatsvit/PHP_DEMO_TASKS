@@ -1,0 +1,8 @@
+services:
+    AppBundle\Service\Task:
+        public: false
+        arguments: ["@service_container"]
+    
+    app.task:
+        alias: AppBundle\Service\Task
+        public: true

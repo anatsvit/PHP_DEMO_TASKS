@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Задачи</title>
+        <script src="{{ asset('js/lib/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ asset('js/lib/jquery.twbsPagination.min.js') }}"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" id="search" placeholder="Поиск">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Заголовок</th>
+                        <th>Дата выполнения</th>
+                    </tr>
+                </thead>
+                <tbody id="taskview">
+
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="pagination"></ul>
+            </nav>
+        </div>
+       
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="exampleModalBody">
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        <script type="text/javascript">
+            var tasklistUrl = '{{ path('tasklist') }}';
+        </script>
+        <script src="{{ asset('js/homepage.js') }}" /></script>
+    </body>
+</html>
